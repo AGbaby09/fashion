@@ -1,0 +1,26 @@
+#Navbar {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  width: auto;
+  height: 5vh;
+  background: var(--main-bg);
+  border-radius: 0 0 1vh 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  padding: 0 1.25vw;
+  > a {
+    font-size: 1.5vh;
+    border-radius: 50px;
+    color: var(--asset-color);
+    &.active {
+      padding: 0.5vh 0.5vw;
+      background: rgb(128, 128, 128, 0.125);
+    }
+  }
+}
