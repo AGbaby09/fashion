@@ -28,6 +28,10 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import CircularText from "@/components/CircularText";
+import TextTrail from "@/components/TextTrail";
+import SplashCursor from "@/components/SplashCursor";
+import Lightning from "@/components/Lighthning";
 
 export default function MyScene() {
   const [activeServ, setActiveServ] = useState(0);
@@ -92,8 +96,12 @@ export default function MyScene() {
                   </p>
                 </div>
                 <div className="bottom">
-                  <motion.button whileTap={{scale: 0.95}} className="prev">P</motion.button>
-                  <motion.button whileTap={{scale: 0.95}} className="next">N</motion.button>
+                  <motion.button whileTap={{ scale: 0.95 }} className="prev">
+                    P
+                  </motion.button>
+                  <motion.button whileTap={{ scale: 0.95 }} className="next">
+                    N
+                  </motion.button>
                 </div>
               </div>
               <Swiper
@@ -246,6 +254,8 @@ export default function MyScene() {
                 <img src="/img/medium.jpg" alt="" />
               </div>
             </div>
+            {/* <Lightning /> */}
+            <SplashCursor />
           </footer>
         </div>
       </main>
@@ -307,6 +317,12 @@ const Slab = ({ activeService, index }) => {
         Our <br /> Service
       </h1>
       <div className="img">
+        <CircularText
+          text="A*TAILUER*DE*SEYE*"
+          onHover="speedUp"
+          spinDuration={20}
+          className="custom-class"
+        />
         <img src="/img/medium.jpg" alt="" />
         {activeService !== index && <div className="cover"></div>}
       </div>
